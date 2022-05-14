@@ -1,13 +1,41 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  direction: rtl;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@media screen and (min-width: 576px) {
+  .dropdown:hover .dropdown-content {
+    display: block;
+    animation: all 0.3s;
+  }
+}
+@keyframes all {
+  from {
+    top: 60px;
+    opacity: 0.1;
+  }
+  to {
+    top: 50px;
+    opacity: 1;
+  }
+}
+.card-img:hover .card-img-cover {
+  display: block;
+}
+.filter-content {
+  animation: filterContent 0.4s;
+}
+@keyframes filterContent {
+  from {
+    top: 45px;
+    opacity: 0.1;
+  }
+  to {
+    top: 40px;
+    opacity: 1;
+  }
+}
+.sakhtIran-cover {
+  background-image: url("./img/sakhtiran-cover.jpg");
 }
